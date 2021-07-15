@@ -1,0 +1,25 @@
+{
+  "devDependencies": {
+    "@fitbit/sdk": "~5.0.0"
+  },
+  "fitbit": {
+    "appUUID": "060245b5-214f-4807-a40c-d0b9749c3fdb",
+    "appType": "app",
+    "appDisplayName": "NBA Games",
+    "iconFile": "resources/icon.png",
+    "wipeColor": "#8bc34a",
+    "requestedPermissions": [
+      "access_internet"
+    ],
+    "buildTargets": [
+      "atlas",
+      "vulcan"
+    ],
+    "i18n": {
+      "en-US": {
+        "name": "NBA Games"
+      }
+    },
+    "defaultLanguage": "en-US"
+  }
+}

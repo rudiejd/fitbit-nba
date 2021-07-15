@@ -1,0 +1,41 @@
+<svg>
+  <!-- Define a reusable tile to display a game -->
+   <rect x="44" y="50" fille="white">
+   <symbol id='game-item' href='#tile-list-item' height='100' display='none'>
+      <text id="date" y="35" x="20%" fill="white" font-size="22" text-length="16"></text>
+      <text id="match" y="60" x="20%" fill="white" font-size="22" text-length="16"></text>
+      <rect id="touch" pointer-events="visible" />
+      <rect id="tile-divider-bottom" height="2" class="list-seperator"/>
+  </symbol>
+   <use id='game-list' href='#tile-list'>
+    <!-- We need to mark this as a VirtualTileList -->
+    <var id='virtual' value='1' />
+    
+    <!-- Each of our tiles have the 2px 'tile-divider-bottom'.
+      -- In order to properly calculate offsets when scrolling,
+      -- we need to tell the tile list how tall our separator is. -->
+    <var id='separator-height-bottom' value='2'/>
+
+    <!-- The item pools may each only contain a single type of
+      -- tile, and each pool should contain at least enough tiles
+      -- to fit on screen. For smoother scrolling, more are
+      -- recommended.
+      -- In this case, we can fit a maximum of 300/50 = 6 on screen
+      -- so we will keep 10 tiles in each pool. -->
+    <use id='game-pool' href='#tile-list-pool'>
+      <use id='game-pool[1]' href='#game-item' />
+      <use id='game-pool[2]' href='#game-item' />
+      <use id='game-pool[3]' href='#game-item' />
+      <use id='game-pool[4]' href='#game-item' />
+      <use id='game-pool[5]' href='#game-item' />
+      <use id='game-pool[6]' href='#game-item' />
+      <use id='game-pool[7]' href='#game-item' />
+      <use id='game-pool[8]' href='#game-item' />
+      <use id='game-pool[9]' href='#game-item' />
+      <use id='game-pool[10]' href='#game-item' />
+      <use id='game-pool[11]' href='#game-item' />
+      <use id='game-pool[12]' href='#game-item' />
+      <use id='game-pool[13]' href='#game-item' />
+    </use>
+  </use>
+</svg>
